@@ -14,11 +14,12 @@
         android:layout_height="56dp"
         android:src="@mipmap/ic_launcher_round"
         android:id="@+id/img_theme"/>
+
     <TextView
+        android:id="@+id/txt_theme"
         android:layout_width="match_parent"
-        android:layout_height="56dp"
-        android:textSize="30sp"
-        android:id="@+id/txt_theme"/>
+        android:layout_height="match_parent"
+        android:textSize="30sp" />
 
 
 

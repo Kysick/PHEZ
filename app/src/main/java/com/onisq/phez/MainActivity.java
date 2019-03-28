@@ -29,6 +29,7 @@ public class MainActivity extends AppCompatActivity {
         adapter.AddFragment(new FragmentBook(), "");
         adapter.AddFragment(new FragmentTask(), "");
 
+
         viewPager.setAdapter(adapter);
         tabLayout.setupWithViewPager(viewPager);
 
