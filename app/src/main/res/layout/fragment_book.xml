@@ -346,7 +346,7 @@
             <android.support.v7.widget.CardView
                 android:foreground="?android:attr/selectableItemBackground"
                 android:clickable="true"
-                android:id="@+id/MagneticId"
+                android:id="@+id/magneticId"
                 android:layout_width="160dp"
                 android:layout_height="160dp"
                 android:layout_margin="10dp">

@@ -9,11 +9,6 @@
 
 
 
-    <ImageView
-        android:layout_width="56dp"
-        android:layout_height="56dp"
-        android:src="@mipmap/ic_launcher_round"
-        android:id="@+id/img_theme"/>
 
     <TextView
         android:id="@+id/txt_theme"
