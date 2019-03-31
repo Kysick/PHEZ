@@ -30,6 +30,7 @@ public class FragmentBook   extends Fragment implements View.OnClickListener {
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         v = inflater.inflate(R.layout.fragment_book, container, false);
+        //Setting cards
         kinematicsCard =  (CardView) v.findViewById(R.id.kinematicsId);
         dynamicsCard =  (CardView)  v.findViewById(R.id.dynamicsId);
         lawOfSavingCard = (CardView) v.findViewById(R.id.lawOfSavingId);
@@ -42,7 +43,22 @@ public class FragmentBook   extends Fragment implements View.OnClickListener {
         magneticCard =  (CardView)v.findViewById(R.id.magneticId);
         electroMagneticCard =  (CardView)v.findViewById(R.id.electroMagneticId);
 
+        //Setting OnClickListener for each card
+
         kinematicsCard.setOnClickListener(this);
+        dynamicsCard.setOnClickListener(this);
+        lawOfSavingCard.setOnClickListener(this);
+        staticCard.setOnClickListener(this);
+        volatilityCard.setOnClickListener(this);
+        molecularPhysicsCard.setOnClickListener(this);
+        termoDynamicsCard.setOnClickListener(this);
+        electricityCard.setOnClickListener(this);
+        electricCurrentCard.setOnClickListener(this);
+        magneticCard.setOnClickListener(this);
+        electroMagneticCard.setOnClickListener(this);
+
+
+
 
 
 
@@ -74,13 +90,68 @@ public class FragmentBook   extends Fragment implements View.OnClickListener {
                 i.putExtra("STRING_I_NEED", "themesKinematics");
                 startActivity(i);
                 break;
+            case R.id.dynamicsId :
 
+                i = new Intent(getActivity(), ListActivity.class);
+                i.putExtra("STRING_I_NEED", "themesDynamics");
+                startActivity(i);
+                break;
+            case R.id.lawOfSavingId:
 
+                i = new Intent(getActivity(), ListActivity.class);
+                i.putExtra("STRING_I_NEED", "themesLawOfSaving");
+                startActivity(i);
+                break;
+            case R.id.staticId:
 
+                i = new Intent(getActivity(), ListActivity.class);
+                i.putExtra("STRING_I_NEED", "themesStatic");
+                startActivity(i);
+                break;
+            case R.id.volatilityId :
 
+                i = new Intent(getActivity(), ListActivity.class);
+                i.putExtra("STRING_I_NEED", "themesVolatility");
+                startActivity(i);
+                break;
+            case R.id.molecularPhysicsId:
 
+                i = new Intent(getActivity(), ListActivity.class);
+                i.putExtra("STRING_I_NEED", "themeMolecularPhysics");
+                startActivity(i);
+                break;
+            case R.id.termoDynamicsId:
 
+                i = new Intent(getActivity(), ListActivity.class);
+                i.putExtra("STRING_I_NEED", "themesTermoDynamic");
+                startActivity(i);
+                break;
+            case R.id.electricityId:
+
+                i = new Intent(getActivity(), ListActivity.class);
+                i.putExtra("STRING_I_NEED", "themesElectricity");
+                startActivity(i);
+                break;
+            case R.id.electricCurrentId:
+
+                i = new Intent(getActivity(), ListActivity.class);
+                i.putExtra("STRING_I_NEED", "themesElectricCurrent");
+                startActivity(i);
+                break;
+            case R.id.magneticId:
+
+                i = new Intent(getActivity(), ListActivity.class);
+                i.putExtra("STRING_I_NEED", "themesMagnetic");
+                startActivity(i);
+                break;
+            case R.id.electroMagneticId:
+
+                i = new Intent(getActivity(), ListActivity.class);
+                i.putExtra("STRING_I_NEED", "themesElectroMagnetic");
+                startActivity(i);
+                break;
         }
+
 
 
     }
