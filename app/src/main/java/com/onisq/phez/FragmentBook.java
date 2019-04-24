@@ -16,7 +16,7 @@ import android.view.ViewGroup;
 import java.util.ArrayList;
 import java.util.List;
 
-public class FragmentBook   extends Fragment implements View.OnClickListener {
+public class FragmentBook extends Fragment implements View.OnClickListener {
 
     View v;
     private CardView kinematicsCard, dynamicsCard, lawOfSavingCard,

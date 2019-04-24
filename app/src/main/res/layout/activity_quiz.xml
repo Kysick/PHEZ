@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".QuizActivity">
+
+    <TextView
+        android:id="@+id/numQ"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:text="Question 1"
+        android:textSize="40sp" />
+
+    <TextView
+        android:id="@+id/question"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
+        android:gravity="center"
+        android:text="Question"
+        android:textSize="20sp" />
+
+    <Button
+        android:id="@+id/ansbtn1"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_marginTop="80dp"
+        android:text="Answer1"
+        android:onClick="checkAnswer"/>
+
+    <Button
+        android:id="@+id/ansbtn2"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_marginTop="5dp"
+        android:gravity="center"
+        android:text="Answer2"
+        android:onClick="checkAnswer"/>
+
+    <Button
+        android:id="@+id/ansbtn3"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_marginTop="5dp"
+        android:gravity="center"
+        android:text="Answer3"
+        android:onClick="checkAnswer"/>
+
+    <Button
+        android:id="@+id/ansbtn4"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_marginTop="5dp"
+        android:gravity="center"
+        android:text="Answer4"
+        android:onClick="checkAnswer"/>
+
+</LinearLayout>
