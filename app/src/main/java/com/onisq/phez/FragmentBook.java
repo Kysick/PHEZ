@@ -87,67 +87,68 @@ public class FragmentBook   extends Fragment implements View.OnClickListener {
             case R.id.kinematicsId :
 
                 i = new Intent(getActivity(), ListActivity.class);
-                i.putExtra("STRING_I_NEED", "themesKinematics");
+                i.putExtra("THEME_STRING", "themesKinematics");
                 startActivity(i);
+
                 break;
             case R.id.dynamicsId :
 
                 i = new Intent(getActivity(), ListActivity.class);
-                i.putExtra("STRING_I_NEED", "themesDynamics");
+                i.putExtra("THEME_STRING", "themesDynamics");
                 startActivity(i);
                 break;
             case R.id.lawOfSavingId:
 
                 i = new Intent(getActivity(), ListActivity.class);
-                i.putExtra("STRING_I_NEED", "themesLawOfSaving");
+                i.putExtra("THEME_STRING", "themesLawOfSaving");
                 startActivity(i);
                 break;
             case R.id.staticId:
 
                 i = new Intent(getActivity(), ListActivity.class);
-                i.putExtra("STRING_I_NEED", "themesStatic");
+                i.putExtra("THEME_STRING", "themesStatic");
                 startActivity(i);
                 break;
             case R.id.volatilityId :
 
                 i = new Intent(getActivity(), ListActivity.class);
-                i.putExtra("STRING_I_NEED", "themesVolatility");
+                i.putExtra("THEME_STRING", "themesVolatility");
                 startActivity(i);
                 break;
             case R.id.molecularPhysicsId:
 
                 i = new Intent(getActivity(), ListActivity.class);
-                i.putExtra("STRING_I_NEED", "themeMolecularPhysics");
+                i.putExtra("THEME_STRING", "themeMolecularPhysics");
                 startActivity(i);
                 break;
             case R.id.termoDynamicsId:
 
                 i = new Intent(getActivity(), ListActivity.class);
-                i.putExtra("STRING_I_NEED", "themesTermoDynamic");
+                i.putExtra("THEME_STRING", "themesTermoDynamic");
                 startActivity(i);
                 break;
             case R.id.electricityId:
 
                 i = new Intent(getActivity(), ListActivity.class);
-                i.putExtra("STRING_I_NEED", "themesElectricity");
+                i.putExtra("THEME_STRING", "themesElectricity");
                 startActivity(i);
                 break;
             case R.id.electricCurrentId:
 
                 i = new Intent(getActivity(), ListActivity.class);
-                i.putExtra("STRING_I_NEED", "themesElectricCurrent");
+                i.putExtra("THEME_STRING", "themesElectricCurrent");
                 startActivity(i);
                 break;
             case R.id.magneticId:
 
                 i = new Intent(getActivity(), ListActivity.class);
-                i.putExtra("STRING_I_NEED", "themesMagnetic");
+                i.putExtra("THEME_STRING", "themesMagnetic");
                 startActivity(i);
                 break;
             case R.id.electroMagneticId:
 
                 i = new Intent(getActivity(), ListActivity.class);
-                i.putExtra("STRING_I_NEED", "themesElectroMagnetic");
+                i.putExtra("THEME_STRING", "themesElectroMagnetic");
                 startActivity(i);
                 break;
         }
