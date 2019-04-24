@@ -27,7 +27,7 @@ public class ListActivity extends AppCompatActivity {
         setContentView(R.layout.activity_list);
 
         //Getting theme
-        String themeString;
+        final String themeString;
 
         if (savedInstanceState == null) {
             Bundle extras = getIntent().getExtras();
@@ -77,6 +77,9 @@ public class ListActivity extends AppCompatActivity {
                // Toast.makeText(getApplicationContext(), "Вы выбрали " + themes.get(position) , Toast.LENGTH_SHORT).show();
                 Intent i;
                 i = new Intent(getApplicationContext(), BookActivity.class);
+                i.putExtra("THEME_STRING", themeString);
+                i.putExtra("SMALLER_THEME_STRING", themes.get(position));
+
 
                 startActivity(i);
             }

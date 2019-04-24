@@ -14,6 +14,7 @@ import java.io.OutputStream;
 public class DatabaseHelper extends SQLiteOpenHelper {
     private static String DB_NAME = "physicsthemesdb.db";
     private static String DB_PATH = "";
+    //DB VERSION
     private static final int DB_VERSION = 3;
 
     private SQLiteDatabase mDataBase;
