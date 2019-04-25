@@ -6,7 +6,7 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:orientation="vertical"
         android:padding="10dp"
         android:layout_gravity="top"
@@ -18,8 +18,7 @@
             android:text="Механика"
             android:textSize="30sp"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            />
+            android:layout_height="wrap_content"/>
     <LinearLayout
         android:clipToPadding="false"
         android:gravity="center"

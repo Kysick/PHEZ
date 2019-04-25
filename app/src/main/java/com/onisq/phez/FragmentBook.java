@@ -42,9 +42,7 @@ public class FragmentBook extends Fragment implements View.OnClickListener {
         electricCurrentCard = (CardView) v.findViewById(R.id.electricCurrentId);
         magneticCard =  (CardView)v.findViewById(R.id.magneticId);
         electroMagneticCard =  (CardView)v.findViewById(R.id.electroMagneticId);
-
         //Setting OnClickListener for each card
-
         kinematicsCard.setOnClickListener(this);
         dynamicsCard.setOnClickListener(this);
         lawOfSavingCard.setOnClickListener(this);
@@ -56,24 +54,13 @@ public class FragmentBook extends Fragment implements View.OnClickListener {
         electricCurrentCard.setOnClickListener(this);
         magneticCard.setOnClickListener(this);
         electroMagneticCard.setOnClickListener(this);
-
-
-
-
-
-
         return v;
-
     }
 
 
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
-
-
-
 
     }
 
