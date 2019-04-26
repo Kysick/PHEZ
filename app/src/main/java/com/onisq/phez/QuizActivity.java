@@ -33,7 +33,7 @@ public class QuizActivity extends AppCompatActivity {
     private int rightAnswerCount = 0;
     private int quizCount = 1;
     private String count;
-    static final private int QUIZ_COUNT = 2;
+    static final private int QUIZ_COUNT = 5;
 
     ArrayList<ArrayList<String>> arrQuiz = new ArrayList<>();
 
