@@ -40,6 +40,7 @@ public class FragmentTask  extends Fragment implements View.OnClickListener {
         switch(v.getId()){
             case R.id.btnQuiz:
                 i = new Intent(getActivity(), QuizActivity.class);
+                i.putExtra("THEME_TASK", "1");
                 startActivity(i);
                 break;
         }

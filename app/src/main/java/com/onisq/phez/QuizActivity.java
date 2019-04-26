@@ -2,6 +2,7 @@ package com.onisq.phez;
 
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.database.Cursor;
 import android.database.SQLException;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
@@ -36,14 +37,6 @@ public class QuizActivity extends AppCompatActivity {
 
     ArrayList<ArrayList<String>> arrQuiz = new ArrayList<>();
 
-    //need to put data
-    String quizData[][] = {
-            {"Каким символом обозначается скорость?", "v", "T", "S", "a"},
-            {"Масса измеряется в:", "кг", "с", "м", "м//с"}
-    };
-
-
-
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_quiz);
@@ -55,16 +48,45 @@ public class QuizActivity extends AppCompatActivity {
         ansbtn3 = (Button) findViewById(R.id.ansbtn3);
         ansbtn4 = (Button) findViewById(R.id.ansbtn4);
 
+        final String themeString;
 
-        for(int i = 0;i < quizData.length; i++){
-                ArrayList<String> arrTmp = new ArrayList<>();
-                arrTmp.add(quizData[i][0]);
-                arrTmp.add(quizData[i][1]);
-                arrTmp.add(quizData[i][2]);
-                arrTmp.add(quizData[i][3]);
-                arrTmp.add(quizData[i][4]);
+        if (savedInstanceState == null) {
+            Bundle extras = getIntent().getExtras();
+            if(extras == null) {
+                themeString= null;
+            } else {
+                themeString = extras.getString("THEME_TASK");
+            }
+        } else {
+            themeString = (String) savedInstanceState.getSerializable("THEME_TASK");
+        }
 
-                arrQuiz.add(arrTmp);
+
+        mDBHelper = new DatabaseHelper(this);
+        try {
+            mDBHelper.updateDataBase();
+        } catch (IOException mIOException) {
+            throw new Error("UnableToUpdateDatabase");
+        }
+
+        try {
+            mDb = mDBHelper.getWritableDatabase();
+        } catch (SQLException mSQLException) {
+            throw mSQLException;
+        }
+
+        String command = "SELECT * FROM tasks " + "WHERE themeID = '" + themeString + "'";
+        Cursor cursor = mDb.rawQuery(command, null);
+        cursor.moveToFirst();
+        while (!cursor.isAfterLast()) {
+            ArrayList<String> arrTmp = new ArrayList<>();
+            arrTmp.add(cursor.getString(cursor.getColumnIndex("question")));
+            arrTmp.add(cursor.getString(cursor.getColumnIndex("ans1")));
+            arrTmp.add(cursor.getString(cursor.getColumnIndex("ans2")));
+            arrTmp.add(cursor.getString(cursor.getColumnIndex("ans3")));
+            arrTmp.add(cursor.getString(cursor.getColumnIndex("ans4")));
+            arrQuiz.add(arrTmp);
+            cursor.moveToNext();
         }
         showNextQuiz();
     }

@@ -63,7 +63,7 @@ public class ListActivity extends AppCompatActivity {
         Cursor cursor = mDb.rawQuery(command, null);
         cursor.moveToFirst();
         while (!cursor.isAfterLast()) {
-           themes.add(cursor.getString(0));
+            themes.add(cursor.getString(0));
             cursor.moveToNext();
         }
 
