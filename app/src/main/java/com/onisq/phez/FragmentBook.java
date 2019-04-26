@@ -42,6 +42,7 @@ public class FragmentBook extends Fragment implements View.OnClickListener {
         electricCurrentCard = (CardView) v.findViewById(R.id.electricCurrentId);
         magneticCard =  (CardView)v.findViewById(R.id.magneticId);
         electroMagneticCard =  (CardView)v.findViewById(R.id.electroMagneticId);
+
         //Setting OnClickListener for each card
         kinematicsCard.setOnClickListener(this);
         dynamicsCard.setOnClickListener(this);

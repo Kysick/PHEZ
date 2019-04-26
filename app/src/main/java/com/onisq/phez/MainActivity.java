@@ -25,7 +25,7 @@ public class MainActivity extends AppCompatActivity {
 
         //Fragments:
 
-        adapter.AddFragment(new FragmentHome(), "");
+        //adapter.AddFragment(new FragmentHome(), "");
         adapter.AddFragment(new FragmentBook(), "");
         adapter.AddFragment(new FragmentTask(), "");
 
@@ -34,9 +34,10 @@ public class MainActivity extends AppCompatActivity {
         tabLayout.setupWithViewPager(viewPager);
 
 
-        tabLayout.getTabAt(0).setIcon(R.drawable.ic_home_black_24dp);
-        tabLayout.getTabAt(1).setIcon(R.drawable.ic_book_black_24dp);
-        tabLayout.getTabAt(2).setIcon(R.drawable.ic_format_list_bulleted_black_24dp);
+       // tabLayout.getTabAt(0).setIcon(R.drawable.ic_home_black_24dp);
+        //Из-за того, что FragmentHome закоменчен, поменялись индексы у двух других фрагментов
+        tabLayout.getTabAt(0).setIcon(R.drawable.ic_book_black_24dp);
+        tabLayout.getTabAt(1).setIcon(R.drawable.ic_format_list_bulleted_black_24dp);
 
         ActionBar actionBar = getSupportActionBar();
         actionBar.setElevation(0);
