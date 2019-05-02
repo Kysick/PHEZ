@@ -8,6 +8,7 @@ import android.os.Bundle;
 
 import com.github.barteksc.pdfviewer.PDFView;
 
+
 import java.io.IOException;
 
 public class BookActivity extends AppCompatActivity {
@@ -19,6 +20,8 @@ public class BookActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_book);
 
         final String smallerthemeString;
         final String themeString;
@@ -65,9 +68,7 @@ public class BookActivity extends AppCompatActivity {
 
 
 
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_book);
         pdfView = findViewById(R.id.pdfView);
-        pdfView.fromAsset(themeToShow + ".pdf").load();
+        pdfView.fromAsset(themeToShow + ".pdf").swipeHorizontal(true).pageFling(true).load();
     }
 }

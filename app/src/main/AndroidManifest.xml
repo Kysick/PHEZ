@@ -9,10 +9,17 @@
         android:roundIcon="@mipmap/albert"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ResultActivity"></activity>
-        <activity android:name=".QuizActivity" />
-        <activity android:name=".BookActivity"></activity>
-        <activity android:name=".ListActivity" />
+        <activity android:name=".FormulaActivity"></activity>
+        <activity android:name=".ResultActivity" />
+        <activity
+            android:name=".QuizActivity"
+            android:screenOrientation="sensorPortrait" />
+        <activity
+            android:name=".BookActivity"
+            android:screenOrientation="sensorPortrait" />
+        <activity
+            android:name=".ListActivity"
+            android:screenOrientation="sensorPortrait" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

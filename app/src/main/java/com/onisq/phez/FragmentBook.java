@@ -6,6 +6,8 @@ import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentTransaction;
+import android.support.v4.view.ViewPager;
 import android.support.v7.widget.CardView;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -20,28 +22,32 @@ public class FragmentBook extends Fragment implements View.OnClickListener {
 
     View v;
     private CardView kinematicsCard, dynamicsCard, lawOfSavingCard,
-            staticCard, volatilityCard, molecularPhysicsCard,termoDynamicsCard, electricityCard, electricCurrentCard,
+            staticCard, volatilityCard, molecularPhysicsCard, termoDynamicsCard, electricityCard, electricCurrentCard,
             magneticCard, electroMagneticCard;
     private Fragment fragment;
-    private  Bundle args;
-    public FragmentBook() {}
+    private Bundle args;
+
+    public FragmentBook() {
+    }
 
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         v = inflater.inflate(R.layout.fragment_book, container, false);
+
+
         //Setting cards
-        kinematicsCard =  (CardView) v.findViewById(R.id.kinematicsId);
-        dynamicsCard =  (CardView)  v.findViewById(R.id.dynamicsId);
+        kinematicsCard = (CardView) v.findViewById(R.id.kinematicsId);
+        dynamicsCard = (CardView) v.findViewById(R.id.dynamicsId);
         lawOfSavingCard = (CardView) v.findViewById(R.id.lawOfSavingId);
-        staticCard =  (CardView) v.findViewById(R.id.staticId);
+        staticCard = (CardView) v.findViewById(R.id.staticId);
         volatilityCard = (CardView) v.findViewById(R.id.volatilityId);
-        molecularPhysicsCard =  (CardView)v.findViewById(R.id.molecularPhysicsId);
-        termoDynamicsCard =  (CardView)v.findViewById(R.id.termoDynamicsId);
-        electricityCard =  (CardView)v.findViewById(R.id.electricityId);
+        molecularPhysicsCard = (CardView) v.findViewById(R.id.molecularPhysicsId);
+        termoDynamicsCard = (CardView) v.findViewById(R.id.termoDynamicsId);
+        electricityCard = (CardView) v.findViewById(R.id.electricityId);
         electricCurrentCard = (CardView) v.findViewById(R.id.electricCurrentId);
-        magneticCard =  (CardView)v.findViewById(R.id.magneticId);
-        electroMagneticCard =  (CardView)v.findViewById(R.id.electroMagneticId);
+        magneticCard = (CardView) v.findViewById(R.id.magneticId);
+        electroMagneticCard = (CardView) v.findViewById(R.id.electroMagneticId);
 
         //Setting OnClickListener for each card
         kinematicsCard.setOnClickListener(this);
@@ -68,18 +74,17 @@ public class FragmentBook extends Fragment implements View.OnClickListener {
 
     @Override
     public void onClick(View v) {
-
         Intent i;
-
-        switch(v.getId()){
-            case R.id.kinematicsId :
+        switch (v.getId()) {
+            case R.id.kinematicsId:
 
                 i = new Intent(getActivity(), ListActivity.class);
                 i.putExtra("THEME_STRING", "themesKinematics");
                 startActivity(i);
 
                 break;
-            case R.id.dynamicsId :
+
+            case R.id.dynamicsId:
 
                 i = new Intent(getActivity(), ListActivity.class);
                 i.putExtra("THEME_STRING", "themesDynamics");
@@ -97,7 +102,7 @@ public class FragmentBook extends Fragment implements View.OnClickListener {
                 i.putExtra("THEME_STRING", "themesStatic");
                 startActivity(i);
                 break;
-            case R.id.volatilityId :
+            case R.id.volatilityId:
 
                 i = new Intent(getActivity(), ListActivity.class);
                 i.putExtra("THEME_STRING", "themesVolatility");
@@ -142,6 +147,6 @@ public class FragmentBook extends Fragment implements View.OnClickListener {
         }
 
 
-
     }
+
 }

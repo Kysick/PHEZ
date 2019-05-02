@@ -115,6 +115,7 @@ public class FragmentTask  extends Fragment implements View.OnClickListener {
                 i.putExtra("THEME_TASK", "5");
                 startActivity(i);
                 break;
+                /*
             case R.id.QuizDynamics3:
                 i = new Intent(getActivity(), QuizActivity.class);
                 i.putExtra("THEME_TASK", "6");
@@ -165,6 +166,9 @@ public class FragmentTask  extends Fragment implements View.OnClickListener {
                 i.putExtra("THEME_TASK", "15");
                 startActivity(i);
                 break;
+*/
+                default:
+
 
         }
     }
