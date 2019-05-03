@@ -46,16 +46,18 @@ public class FormulaActivity extends AppCompatActivity {
 
         //Selecting from theme table
 
+
         final ArrayList<String> themes = new ArrayList<>();
         String command = "SELECT * FROM formulas";
         Cursor cursor = mDb.rawQuery(command, null);
         cursor.moveToFirst();
         while (!cursor.isAfterLast()) {
-            dataModels.add( new FormulaItem(cursor.getString(2), cursor.getString(1),"`" + cursor.getString(0) + "`"));
-            cursor.moveToNext();
+            dataModels.add(new FormulaItem(cursor.getString(2),cursor.getString(1),cursor.getString(0)));
+           cursor.moveToNext();
         }
 
-       // dataModels.add(new FormulaItem("Кинематика","Закон Бойля – Мариотта (изотермический процесс)", "`υ=υ_0+a∙t`"  ));
+
+        //dataModels.add(new FormulaItem("Кинематика","Закон Бойля – Мариотта (изотермический процесс)", "a011_atom"  ));
 
         adapter= new CustomAdapter(dataModels,getApplicationContext());
         listView.setAdapter(adapter);

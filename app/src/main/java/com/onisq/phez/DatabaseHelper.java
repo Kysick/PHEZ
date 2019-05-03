@@ -15,7 +15,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     private static String DB_NAME = "physicsthemesdb.db";
     private static String DB_PATH = "";
     //DB VERSION
-    private static final int DB_VERSION = 22;
+    private static final int DB_VERSION = 34;
 
     private SQLiteDatabase mDataBase;
     private final Context mContext;
