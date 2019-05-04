@@ -9,6 +9,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.ListView;
 import android.widget.Toast;
 
@@ -21,6 +22,7 @@ public class ListActivity extends AppCompatActivity {
     private DatabaseHelper mDBHelper;
     private SQLiteDatabase mDb;
     private ListView lv;
+    private Button formulaBtn;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -82,6 +84,18 @@ public class ListActivity extends AppCompatActivity {
 
 
                 startActivity(i);
+            }
+        });
+
+        formulaBtn = (Button) findViewById(R.id.formulaThemeBTN);
+
+        formulaBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent ii;
+                ii = new Intent(getApplicationContext(), FormulaActivity.class);
+                ii.putExtra("THEME_STRING", themeString);
+                startActivity(ii);
             }
         });
 
