@@ -19,16 +19,17 @@ public class CustomAdapter extends ArrayAdapter<FormulaItem> {
 
     private static class ViewHolder {
         TextView theme;
-        TextView  definition;
+        TextView definition;
         ImageView formula;
     }
 
 
-    public CustomAdapter(ArrayList<FormulaItem> data, Context context){
+    public CustomAdapter(ArrayList<FormulaItem> data, Context context) {
         super(context, R.layout.formula_item, data);
         this.dataSet = data;
-        this.mContext=context;
+        this.mContext = context;
     }
+
     private int lastPosition = -1;
 
 
@@ -50,32 +51,23 @@ public class CustomAdapter extends ArrayAdapter<FormulaItem> {
             viewHolder.definition = (TextView) convertView.findViewById(R.id.formula_definition);
             viewHolder.formula = (ImageView) convertView.findViewById(R.id.formula_math);
 
-    
 
-            result=convertView;
+            result = convertView;
 
             convertView.setTag(viewHolder);
         } else {
             viewHolder = (ViewHolder) convertView.getTag();
-            result=convertView;
+            result = convertView;
         }
 
         viewHolder.theme.setText(formulaItem.getTheme());
         viewHolder.definition.setText(formulaItem.getDefinition());
-        int resID = mContext.getResources().getIdentifier(formulaItem.getFormula() , "drawable", mContext.getPackageName());
-        if(resID!=0) {//The associated resource identifier. Returns 0 if no such resource was found. (0 is not a valid resource ID.)
+        int resID = mContext.getResources().getIdentifier(formulaItem.getFormula(), "drawable", mContext.getPackageName());
+        if (resID != 0) {//The associated resource identifier. Returns 0 if no such resource was found. (0 is not a valid resource ID.)
             viewHolder.formula.setImageResource(resID);
         }
-
-
-
-
         return convertView;
-
-
     }
-
-
 
 
 

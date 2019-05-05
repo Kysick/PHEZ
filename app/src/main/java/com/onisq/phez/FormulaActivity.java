@@ -1,12 +1,17 @@
 package com.onisq.phez;
 
+import android.content.DialogInterface;
+import android.content.Intent;
 import android.database.Cursor;
 import android.database.SQLException;
 import android.database.sqlite.SQLiteDatabase;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
+import android.widget.AdapterView;
 import android.widget.ListView;
 
 import java.io.IOException;
@@ -105,7 +110,7 @@ public class FormulaActivity extends AppCompatActivity {
 
         final ArrayList<String> themes = new ArrayList<>();
         String command = "SELECT * FROM formulas " + place;
-        Cursor cursor = mDb.rawQuery(command, null);
+        final Cursor cursor = mDb.rawQuery(command, null);
         cursor.moveToFirst();
         while (!cursor.isAfterLast()) {
             dataModels.add(new FormulaItem(cursor.getString(2),cursor.getString(1),cursor.getString(0)));
@@ -117,10 +122,25 @@ public class FormulaActivity extends AppCompatActivity {
 
         adapter= new CustomAdapter(dataModels,getApplicationContext());
         listView.setAdapter(adapter);
-
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                getDesc(view, cursor, mDb,dataModels.get(position).getFormula());
+            }
+        });
 
     }
-
+    public void getDesc(View view, Cursor cursor, SQLiteDatabase mDb, String  formula){
+        String command = "SELECT description FROM formulas WHERE formula = '" + formula + "'";
+        cursor = mDb.rawQuery(command, null);
+        cursor.moveToFirst();
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setTitle("Знаки");
+        String desc = cursor.getString(0);
+        builder.setMessage(desc);
+        builder.setCancelable(true);
+        builder.show();
+    }
 
 
 }

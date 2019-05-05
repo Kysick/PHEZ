@@ -9,7 +9,6 @@
 
 
 
-
     <ListView
         android:id="@+id/formula_list"
         android:layout_width="match_parent"
