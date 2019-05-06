@@ -6,11 +6,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ListActivity">
-
-
-
-
-
     <ListView
         android:id="@+id/lvThemeList"
         android:layout_width="match_parent"
@@ -24,11 +19,5 @@
         android:text="Формулы"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
-
-
-
-
-
-
     </RelativeLayout>
 
