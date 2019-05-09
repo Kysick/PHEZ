@@ -54,19 +54,10 @@ public class ResultActivity extends AppCompatActivity {
 
         mDb.update("stats", cv,null, null);
 
-        /*SharedPreferences settings = getSharedPreferences("quizApp", Context.MODE_PRIVATE);
-        int totalScore = settings.getInt("totalScore", 0);
-        totalScore += score;*/
-
         String fscore = Integer.toString(finalScore);
 
         resultTv.setText(score + " / 5");
         totalScoreTv.setText("Total Score : " + fscore);
-
-        //Update Total Score
-        /*SharedPreferences.Editor editor = settings.edit();
-        editor.putInt("totalScore", totalScore);
-        editor.commit();*/
     }
 
     public void returnTop(View view){

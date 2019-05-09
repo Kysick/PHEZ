@@ -166,10 +166,7 @@ public class FragmentTask  extends Fragment implements View.OnClickListener {
                 i.putExtra("THEME_TASK", "15");
                 startActivity(i);
                 break;
-
                 default:
-
-
         }
     }
 }
