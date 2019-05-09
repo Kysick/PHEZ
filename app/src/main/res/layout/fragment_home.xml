@@ -1,52 +1,55 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:orientation="vertical">
-
-<LinearLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Привет (не) пидор!"
-        android:padding="10dp"
-        android:textSize="30sp"
-        android:layout_gravity="center_horizontal"/>
-    <ProgressBar
-        android:id="@+id/progressBar"
-        android:layout_width="300dp"
-        android:layout_height="300dp"
-        style="?android:progressBarStyleHorizontal"
-        android:max="50"
-        android:rotation="90"
-        android:progress="40"
-        android:layout_gravity="center_horizontal"
-        android:progressDrawable="@drawable/circle"/>
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:gravity="center_horizontal">
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
-        <Button
-            android:id="@+id/formulaBTN"
+        <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:text="Формулы"
-            android:textSize="20sp" />
-        <Button
-            android:id="@+id/settingsBTN"
-            android:layout_width="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:padding="10dp"
+            android:text="Привет!"
+            android:textSize="30sp" />
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            style="?android:progressBarStyleHorizontal"
+            android:layout_width="300dp"
+            android:layout_height="300dp"
+            android:layout_gravity="center_horizontal"
+            android:max="50"
+            android:progress="40"
+            android:progressDrawable="@drawable/circle"
+            android:rotation="90" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Настройки"
-            android:textSize="20sp"
-            android:layout_gravity="center"/>
+            android:gravity="center_horizontal"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/formulaBTN"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Формулы"
+                android:textSize="20sp" />
+
+            <Button
+                android:id="@+id/settingsBTN"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Настройки"
+                android:textSize="20sp" />
+        </LinearLayout>
     </LinearLayout>
-</LinearLayout>
 </ScrollView>
