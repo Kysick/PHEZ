@@ -25,9 +25,16 @@ public class FormulaActivity extends AppCompatActivity {
     private static CustomAdapter adapter;
     private DatabaseHelper mDBHelper;
     private SQLiteDatabase mDb;
-
+    private SharedPref sharedPref;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
+        sharedPref = new SharedPref(this);
+        if(sharedPref.loadNightModeState() == true){
+            setTheme(R.style.darkTheme);
+        }
+        else setTheme(R.style.AppTheme);
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_formula);
         listView=(ListView)findViewById(R.id.formula_list);
@@ -120,7 +127,7 @@ public class FormulaActivity extends AppCompatActivity {
 
        // dataModels.add(new FormulaItem("Кинематика","Закон Бойля – Мариотта (изотермический процесс)", "a011_atom"  ));
 
-        adapter= new CustomAdapter(dataModels,getApplicationContext());
+        adapter= new CustomAdapter(dataModels,FormulaActivity.this);
         listView.setAdapter(adapter);
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
@@ -141,6 +148,8 @@ public class FormulaActivity extends AppCompatActivity {
         builder.setCancelable(true);
         builder.show();
     }
+
+
 
 
 }

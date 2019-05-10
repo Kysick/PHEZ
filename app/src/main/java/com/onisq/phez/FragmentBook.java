@@ -35,7 +35,12 @@ public class FragmentBook extends Fragment implements View.OnClickListener {
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         v = inflater.inflate(R.layout.fragment_book, container, false);
 
-
+        SharedPref sharedPref;
+        sharedPref = new SharedPref(getContext());
+        if(sharedPref.loadNightModeState() == true){
+            getActivity().setTheme(R.style.darkTheme);
+        }
+        else getActivity().setTheme(R.style.AppTheme);
         //Setting cards
         kinematicsCard = (CardView) v.findViewById(R.id.kinematicsId);
         dynamicsCard = (CardView) v.findViewById(R.id.dynamicsId);
@@ -148,5 +153,6 @@ public class FragmentBook extends Fragment implements View.OnClickListener {
 
 
     }
+
 
 }

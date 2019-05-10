@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/albert"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".FormulaActivity"></activity>
+        <activity android:name=".SettingsActivity"></activity>
+        <activity android:name=".FormulaActivity" />
         <activity android:name=".ResultActivity" />
         <activity
             android:name=".QuizActivity"

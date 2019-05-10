@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
     android:layout_width="match_parent"
     android:layout_height="70dp"
-    android:orientation="horizontal">
+    android:orientation="horizontal"
+    android:background="?attr/cardbackgroundcolor">
 
 
     <ImageView
@@ -15,15 +17,17 @@
 
 
     <TextView
+
         android:padding="5dp"
         android:id="@+id/formula_definition"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_toEndOf="@+id/formula_math"
-        android:textColor="@android:color/background_dark"
+        android:textColor="?attr/textcolor"
         android:textSize="17sp" />
 
     <TextView
+        android:textColor="?attr/textcolor"
         android:id="@+id/formula_theme"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

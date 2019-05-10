@@ -1,10 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#008577</color>
-    <color name="colorPrimaryDark">#00574B</color>
-    <color name="colorAccent">#D81B60</color>
+
+
     <color name="colorBronze">#CD7F32</color>
     <color name="colorSilver">#C0C0C0</color>
     <color name="colorGold">#FFD700</color>
+    <color name="colorPrimary">#008577</color>
+    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorAccent">#D81B60</color>
+    <color name="backgroundcolorLight">#ffffff</color>
+    <color name="cardbackgroundcolorLight">#ffffff</color>
+    <color name="textcolorLight">#000000</color>
+    <color name="tintcolorLight">#000000</color>
+    <color name="buttoncolorLight">#ffffff</color>
+
+
+    <color name="colorPrimaryNight">#263238</color>
+    <color name="colorPrimaryDarkNight">#000a12</color>
+    <color name="colorAccentNight">#81d4fa</color>
+    <color name="backgroundcolorNight">#102027</color>
+    <color name="cardbackgroundcolorNight">#37474f</color>
+    <color name="textcolorNight">#ffffff</color>
+    <color name="tintcolorNight">#ffffff</color>
+    <color name="buttoncolorNight">#37474f</color>
+
+
+
 
 </resources>

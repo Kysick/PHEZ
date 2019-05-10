@@ -1,5 +1,6 @@
 package com.onisq.phez;
 
+import android.content.Intent;
 import android.support.design.widget.TabLayout;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.ActionBar;
@@ -11,11 +12,21 @@ public class MainActivity extends AppCompatActivity {
     private TabLayout tabLayout;
     private ViewPager viewPager;
     private ViewPagerAdapter adapter;
-
+    private SharedPref sharedPref;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
+
+
+        sharedPref = new SharedPref(this);
+        if(sharedPref.loadNightModeState() == true){
+            setTheme(R.style.darkTheme);
+        }
+        else setTheme(R.style.AppTheme);
+
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
@@ -43,9 +54,7 @@ public class MainActivity extends AppCompatActivity {
         ActionBar actionBar = getSupportActionBar();
         actionBar.setElevation(0);
 
-
-
-
-
     }
+
+
 }

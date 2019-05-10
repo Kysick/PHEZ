@@ -23,6 +23,7 @@ public class FragmentHome   extends Fragment {
 
     View v;
     Button formula;
+    Button settings;
     private DatabaseHelper mDBHelper;
     private SQLiteDatabase mDb;
     public FragmentHome() {}
@@ -31,6 +32,13 @@ public class FragmentHome   extends Fragment {
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         v = inflater.inflate(R.layout.fragment_home, container, false);
+
+        SharedPref sharedPref;
+        sharedPref = new SharedPref(getContext());
+        if(sharedPref.loadNightModeState() == true){
+            getActivity().setTheme(R.style.darkTheme);
+        }
+        else getActivity().setTheme(R.style.AppTheme);
 
         mDBHelper = new DatabaseHelper(getContext());
 
@@ -61,6 +69,16 @@ public class FragmentHome   extends Fragment {
                 Intent i;
                 i = new Intent(getActivity(), FormulaActivity.class);
                 startActivity(i);
+            }
+        });
+
+        settings = (Button) v.findViewById(R.id.settingsBTN);
+        settings.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent ii;
+                ii = new Intent(getActivity(), SettingsActivity.class);
+                startActivity(ii);
             }
         });
 

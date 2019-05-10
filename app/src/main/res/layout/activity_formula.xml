@@ -5,11 +5,13 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".FormulaActivity"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:background="?attr/backgroundcolor">
 
 
 
     <ListView
+
         android:id="@+id/formula_list"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />

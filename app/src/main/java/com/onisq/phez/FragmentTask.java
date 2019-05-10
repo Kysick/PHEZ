@@ -29,7 +29,12 @@ public class FragmentTask  extends Fragment implements View.OnClickListener {
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         v = inflater.inflate(R.layout.fragment_task, container, false);
-
+        SharedPref sharedPref;
+        sharedPref = new SharedPref(getContext());
+        if(sharedPref.loadNightModeState() == true){
+            getActivity().setTheme(R.style.darkTheme);
+        }
+        else getActivity().setTheme(R.style.AppTheme);
 
 
 

@@ -17,6 +17,7 @@ public class CustomAdapter extends ArrayAdapter<FormulaItem> {
     private ArrayList<FormulaItem> dataSet;
     private Context mContext;
 
+
     private static class ViewHolder {
         TextView theme;
         TextView definition;
@@ -46,6 +47,7 @@ public class CustomAdapter extends ArrayAdapter<FormulaItem> {
 
             viewHolder = new ViewHolder();
             LayoutInflater inflater = LayoutInflater.from(getContext());
+
             convertView = inflater.inflate(R.layout.formula_item, parent, false);
             viewHolder.theme = (TextView) convertView.findViewById(R.id.formula_theme);
             viewHolder.definition = (TextView) convertView.findViewById(R.id.formula_definition);

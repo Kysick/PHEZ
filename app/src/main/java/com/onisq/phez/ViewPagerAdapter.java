@@ -47,4 +47,8 @@ public class ViewPagerAdapter extends FragmentPagerAdapter {
         lstTitles.add(title);
     }
 
+    @Override
+    public void notifyDataSetChanged() {
+        super.notifyDataSetChanged();
+    }
 }
