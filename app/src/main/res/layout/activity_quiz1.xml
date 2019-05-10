@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context=".QuizActivity">
-
     <TextView
         android:id="@+id/numQ"
         android:layout_width="match_parent"
@@ -19,10 +18,11 @@
         android:id="@+id/question"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="50dp"
         android:gravity="center"
         android:text="Question"
-        android:textSize="20sp" />
+        android:textSize="20sp"
+        android:layout_below="@+id/numQ"/>
 
     <Button
         android:id="@+id/ansbtn1"
@@ -30,7 +30,8 @@
         android:layout_height="60dp"
         android:layout_marginTop="80dp"
         android:text="Answer1"
-        android:onClick="checkAnswer"/>
+        android:onClick="checkAnswerBronze"
+        android:layout_above="@+id/ansbtn2"/>
 
     <Button
         android:id="@+id/ansbtn2"
@@ -38,7 +39,8 @@
         android:layout_height="60dp"
         android:layout_marginTop="5dp"
         android:text="Answer2"
-        android:onClick="checkAnswer"/>
+        android:onClick="checkAnswerBronze"
+        android:layout_above="@+id/ansbtn3"/>
 
     <Button
         android:id="@+id/ansbtn3"
@@ -46,7 +48,8 @@
         android:layout_height="60dp"
         android:layout_marginTop="5dp"
         android:text="Answer3"
-        android:onClick="checkAnswer"/>
+        android:onClick="checkAnswerBronze"
+        android:layout_above="@+id/ansbtn4"/>
 
     <Button
         android:id="@+id/ansbtn4"
@@ -56,6 +59,6 @@
         android:layout_marginTop="5dp"
         android:gravity="center"
         android:text="Answer4"
-        android:onClick="checkAnswer"/>
-
-</LinearLayout>
+        android:onClick="checkAnswerBronze"
+        android:layout_alignParentBottom="true"/>
+</RelativeLayout>

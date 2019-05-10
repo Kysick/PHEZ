@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".QuizActivity">
+    <TextView
+        android:id="@+id/numQ"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:text="Question 1"
+        android:textSize="40sp" />
+
+    <TextView
+        android:id="@+id/question"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:gravity="center"
+        android:text="Question"
+        android:textSize="20sp"
+        android:layout_below="@+id/numQ"/>
+
+    <EditText
+        android:id="@+id/answer"
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:hint="Your answer is?"
+        android:gravity="center"
+        android:layout_below="@+id/question"
+        android:layout_marginTop="50dp"
+        android:inputType="text"
+        android:layout_centerHorizontal="true"/>
+
+</RelativeLayout>
