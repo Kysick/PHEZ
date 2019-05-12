@@ -38,12 +38,21 @@ public class QuizActivity extends AppCompatActivity {
     private int quizCount = 1;
     private String count;
     static final private int QUIZ_COUNT = 5;
+    SharedPref sharedPref;
 
-    String qData[][] = {{"1", "1"},{"2", "2"},{"3", "3"},{"4", "4"},{"5", "5"}};
 
     ArrayList<ArrayList<String>> arrQuiz = new ArrayList<>();
 
     protected void onCreate(Bundle savedInstanceState) {
+
+
+        sharedPref = new SharedPref(this);
+        if(sharedPref.loadNightModeState() == true){
+            setTheme(R.style.darkTheme);
+        }
+        else setTheme(R.style.AppTheme);
+
+
         super.onCreate(savedInstanceState);
 
         final String themeString;

@@ -6,9 +6,11 @@
     android:layout_height="match_parent"
     tools:context=".ResultActivity"
     android:orientation="vertical"
-    android:gravity="center_horizontal">
+    android:gravity="center_horizontal"
+    android:background="?attr/backgroundcolor">
 
     <TextView
+        android:textColor="?attr/textcolor"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="RESULT"
@@ -16,6 +18,7 @@
         android:layout_marginTop="50dp"/>
 
     <TextView
+        android:textColor="?attr/textcolor"
         android:id="@+id/resultTv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -24,6 +27,7 @@
         android:layout_marginTop="60dp"/>
 
     <TextView
+        android:textColor="?attr/textcolor"
         android:id="@+id/totalScoreTv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -32,6 +36,8 @@
         android:layout_marginTop="60dp"/>
 
     <Button
+        android:background="?attr/buttoncolor"
+        android:textColor="?attr/textcolor"
         android:layout_width="150dp"
         android:layout_height="50dp"
         android:text="return"

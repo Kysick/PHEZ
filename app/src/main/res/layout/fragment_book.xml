@@ -78,6 +78,7 @@
                     android:src="@drawable/a026_hypotenuse"
                     android:padding="10dp"/>
                 <TextView
+                    android:textColor="?attr/textcolor"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textStyle="bold"
@@ -116,6 +117,7 @@
                         android:src="@drawable/a034_pendulum_1"
                         android:padding="10dp"/>
                     <TextView
+                        android:textColor="?attr/textcolor"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textStyle="bold"
@@ -148,6 +150,7 @@
                         android:src="@drawable/a032_motion_1" />
 
                     <TextView
+                        android:textColor="?attr/textcolor"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="10dp"
@@ -186,6 +189,7 @@
                         android:src="@drawable/a004_pendulum"
                         android:padding="10dp"/>
                     <TextView
+                        android:textColor="?attr/textcolor"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textStyle="bold"
@@ -201,6 +205,7 @@
         </LinearLayout>
 
         <TextView
+            android:textColor="?attr/textcolor"
             android:layout_gravity="top"
             android:gravity="center"
             android:text="Молекулярная физика"
@@ -234,6 +239,7 @@
                         android:src="@drawable/a011_atom"
                         android:padding="10dp"/>
                     <TextView
+                        android:textColor="?attr/textcolor"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textStyle="bold"
@@ -263,6 +269,7 @@
                         android:src="@drawable/a_temperature"
                         android:padding="10dp"/>
                     <TextView
+                        android:textColor="?attr/textcolor"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textStyle="bold"
@@ -277,6 +284,7 @@
         </LinearLayout>
 
         <TextView
+            android:textColor="?attr/textcolor"
             android:layout_gravity="top"
             android:gravity="center"
             android:text="Основы электродинамики"
@@ -315,6 +323,7 @@
                         android:textStyle="bold"
                         android:textSize="15sp"
                         android:layout_marginTop="10dp"
+                        android:textColor="?attr/textcolor"
                         android:text="Электричество"/>
 
 
@@ -340,6 +349,7 @@
                         android:padding="10dp"
                         android:src="@drawable/a019_electrical_circuit" />
                     <TextView
+                        android:textColor="?attr/textcolor"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textStyle="bold"
@@ -378,6 +388,7 @@
                         android:src="@drawable/magnetic"
                         android:padding="10dp"/>
                     <TextView
+                        android:textColor="?attr/textcolor"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textStyle="bold"
@@ -407,6 +418,7 @@
                         android:src="@drawable/electric_magnetic"
                         android:padding="10dp"/>
                     <TextView
+                        android:textColor="?attr/textcolor"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textStyle="bold"

@@ -4,8 +4,10 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".QuizActivity">
+    tools:context=".QuizActivity"
+    android:background="?attr/backgroundcolor">
     <TextView
+        android:textColor="?attr/textcolor"
         android:id="@+id/numQ"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -15,6 +17,7 @@
         android:textSize="40sp" />
 
     <TextView
+        android:textColor="?attr/textcolor"
         android:id="@+id/question"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -25,6 +28,8 @@
         android:layout_below="@+id/numQ"/>
 
     <Button
+        android:background="?attr/buttoncolor"
+        android:textColor="?attr/textcolor"
         android:id="@+id/ansbtn1"
         android:layout_width="match_parent"
         android:layout_height="60dp"
@@ -34,6 +39,8 @@
         android:layout_above="@+id/ansbtn2"/>
 
     <Button
+        android:background="?attr/buttoncolor"
+        android:textColor="?attr/textcolor"
         android:id="@+id/ansbtn2"
         android:layout_width="match_parent"
         android:layout_height="60dp"
@@ -43,6 +50,8 @@
         android:layout_above="@+id/ansbtn3"/>
 
     <Button
+        android:background="?attr/buttoncolor"
+        android:textColor="?attr/textcolor"
         android:id="@+id/ansbtn3"
         android:layout_width="match_parent"
         android:layout_height="60dp"
@@ -52,6 +61,8 @@
         android:layout_above="@+id/ansbtn4"/>
 
     <Button
+        android:background="?attr/buttoncolor"
+        android:textColor="?attr/textcolor"
         android:id="@+id/ansbtn4"
         android:layout_gravity="bottom"
         android:layout_width="match_parent"

@@ -69,6 +69,12 @@ public class BookActivity extends AppCompatActivity {
 
 
         pdfView = findViewById(R.id.pdfView);
-        pdfView.fromAsset(themeToShow + ".pdf").swipeHorizontal(true).pageFling(true).load();
+        
+        SharedPref sharedPref;
+        sharedPref = new SharedPref(this);
+        if(sharedPref.loadNightModeState() == true)
+            pdfView.fromAsset(themeToShow + ".pdf").swipeHorizontal(true).nightMode(true).pageFling(true).load();
+        else
+            pdfView.fromAsset(themeToShow + ".pdf").swipeHorizontal(true).pageFling(true).load();
     }
 }
