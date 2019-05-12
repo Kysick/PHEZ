@@ -20,9 +20,17 @@ public class ResultActivity extends AppCompatActivity {
     TextView totalScoreTv;
     private DatabaseHelper mDBHelper;
     private SQLiteDatabase mDb;
+    private SharedPref sharedPref;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
+        sharedPref = new SharedPref(this);
+        if(sharedPref.loadNightModeState() == true){
+            setTheme(R.style.darkTheme);
+        }
+        else setTheme(R.style.AppTheme);
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_result);
 
