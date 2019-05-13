@@ -5,8 +5,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ListActivity">
+    tools:context=".ListActivity"
+    android:background="?attr/backgroundcolor">
     <ListView
+        android:background="?attr/backgroundcolor"
         android:id="@+id/lvThemeList"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
@@ -18,6 +20,8 @@
         android:padding="10dp"
         android:text="Формулы"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:background="?attr/buttoncolor"
+        android:textColor="?attr/textcolor"/>
     </RelativeLayout>
 

@@ -11,6 +11,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
+import android.view.animation.AlphaAnimation;
+import android.view.animation.Animation;
 import android.widget.AdapterView;
 import android.widget.ListView;
 
@@ -132,6 +134,9 @@ public class FormulaActivity extends AppCompatActivity {
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Animation animation1 = new AlphaAnimation(0.3f, 1.0f);
+                animation1.setDuration(200);
+                view.startAnimation(animation1);
                 getDesc(view, cursor, mDb,dataModels.get(position).getFormula());
             }
         });
