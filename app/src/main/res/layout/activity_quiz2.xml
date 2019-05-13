@@ -4,8 +4,10 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".QuizActivity">
+    tools:context=".QuizActivity"
+    android:background="?attr/backgroundcolor">
     <TextView
+        android:textColor="?attr/textcolor"
         android:id="@+id/numQ"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -14,6 +16,7 @@
         android:text="Вопрос 1"
         android:textSize="40sp" />
     <TextView
+        android:textColor="?attr/textcolor"
         android:id="@+id/question"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -23,6 +26,8 @@
         android:textSize="20sp"
         android:layout_below="@+id/numQ"/>
     <CheckBox
+        android:buttonTint="?attr/textcolor"
+        android:textColor="?attr/textcolor"
         android:id="@+id/ansbtn1"
         android:onClick="selectItem"
         android:layout_width="300dp"
@@ -30,6 +35,8 @@
         android:layout_above="@+id/ansbtn2"
         android:layout_centerHorizontal="true"/>
     <CheckBox
+        android:buttonTint="?attr/textcolor"
+        android:textColor="?attr/textcolor"
         android:id="@+id/ansbtn2"
         android:onClick="selectItem"
         android:layout_width="300dp"
@@ -37,6 +44,8 @@
         android:layout_above="@+id/ansbtn3"
         android:layout_centerHorizontal="true"/>
     <CheckBox
+        android:buttonTint="?attr/textcolor"
+        android:textColor="?attr/textcolor"
         android:id="@+id/ansbtn3"
         android:onClick="selectItem"
         android:layout_width="300dp"
@@ -44,6 +53,8 @@
         android:layout_above="@+id/ansbtn4"
         android:layout_centerHorizontal="true"/>
     <CheckBox
+        android:buttonTint="?attr/textcolor"
+        android:textColor="?attr/textcolor"
         android:id="@+id/ansbtn4"
         android:onClick="selectItem"
         android:layout_width="300dp"
@@ -51,6 +62,8 @@
         android:layout_above="@+id/ansbtn5"
         android:layout_centerHorizontal="true"/>
     <CheckBox
+        android:buttonTint="?attr/textcolor"
+        android:textColor="?attr/textcolor"
         android:id="@+id/ansbtn5"
         android:onClick="selectItem"
         android:layout_width="300dp"
@@ -58,6 +71,8 @@
         android:layout_above="@+id/ansbtn6"
         android:layout_centerHorizontal="true"/>
     <CheckBox
+        android:buttonTint="?attr/textcolor"
+        android:textColor="?attr/textcolor"
         android:id="@+id/ansbtn6"
         android:onClick="selectItem"
         android:layout_width="300dp"
@@ -65,6 +80,8 @@
         android:layout_above="@+id/submitBtn"
         android:layout_centerHorizontal="true"/>
     <Button
+        android:textColor="?attr/textcolor"
+        android:background="?attr/buttoncolor"
         android:id="@+id/submitBtn"
         android:layout_width="350dp"
         android:layout_height="50dp"

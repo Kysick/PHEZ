@@ -23,6 +23,8 @@ import java.util.Random;
 
 public class QuizActivity extends AppCompatActivity {
 
+    private SharedPref sharedPref;
+
     private TextView numQ;
     private TextView question;
     private Button ansbtn1;
@@ -54,6 +56,11 @@ public class QuizActivity extends AppCompatActivity {
     ArrayList<String> rightAns = new ArrayList<>();
 
     protected void onCreate(Bundle savedInstanceState) {
+        sharedPref = new SharedPref(this);
+        if(sharedPref.loadNightModeState() == true){
+            setTheme(R.style.darkTheme);
+        }
+        else setTheme(R.style.AppTheme);
         super.onCreate(savedInstanceState);
 
         final String themeString;
