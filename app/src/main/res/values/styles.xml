@@ -12,7 +12,7 @@
         <item name="cardbackgroundcolor">@color/cardbackgroundcolorLight</item>
         <item name="textcolor">@color/textcolorLight</item>
         <item name="tintcolor">@color/colorAccent</item>
-        <item name="buttoncolor">@color/colorAccent</item>
+        <item name="buttoncolor">@color/buttoncolorLight</item>
         <item name="android:windowAnimationStyle" >@style/WindowAnimationTransition</item>
     </style>
 
