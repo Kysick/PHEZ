@@ -14,13 +14,18 @@ import android.widget.Button;
 public class FragmentTask  extends Fragment implements View.OnClickListener {
 
     View v;
-    Button btnQuiz;
-    private CardView quizKinematics1, quizKinematics2, quizKinematics3, quizDynamics1, quizDynamics2,
-    quizDynamics3, quizLaws1,quizLaws2,quizLaws3,quizStatic1,quizStatic2,quizStatic3,
-            quizVolatility1,quizVolatility2,quizVolatility3;
-
-
-
+    private CardView
+            quizKinematics1, quizKinematics2, quizKinematics3,
+            quizDynamics1, quizDynamics2, quizDynamics3,
+            quizLaws1,quizLaws2,quizLaws3,
+            quizStatic1,quizStatic2,quizStatic3,
+            quizVolatility1,quizVolatility2,quizVolatility3,
+            quizMolecularPhysics1,quizMolecularPhysics2,quizMolecularPhysics3,
+            quizTermoDynamics1,quizTermoDynamics2,quizTermoDynamics3,
+            quizElectricity1,quizElectricity2,quizElectricity3,
+            quizElectricCurrent1,quizElectricCurrent2,quizElectricCurrent3,
+            quizMagnetic1,quizMagnetic2,quizMagnetic3,
+            quizElectroMagnetic1,quizElectroMagnetic2,quizElectroMagnetic3;
     private Fragment fragment;
 
     public FragmentTask() {}
@@ -35,8 +40,6 @@ public class FragmentTask  extends Fragment implements View.OnClickListener {
             getActivity().setTheme(R.style.darkTheme);
         }
         else getActivity().setTheme(R.style.AppTheme);
-
-
 
         //Setting cards
         quizKinematics1 = (CardView) v.findViewById(R.id.QuizKinematics1);
@@ -60,6 +63,30 @@ public class FragmentTask  extends Fragment implements View.OnClickListener {
         quizVolatility3 = (CardView) v.findViewById(R.id.QuizVolatility3);
 
 
+        quizMolecularPhysics1 = (CardView) v.findViewById(R.id.QuizMolecularPhysics1);
+        quizMolecularPhysics2 = (CardView) v.findViewById(R.id.QuizMolecularPhysics2);
+        quizMolecularPhysics3 = (CardView) v.findViewById(R.id.QuizMolecularPhysics3);
+
+        quizTermoDynamics1 = (CardView) v.findViewById(R.id.QuizTermoDynamics1);
+        quizTermoDynamics2 = (CardView) v.findViewById(R.id.QuizTermoDynamics2);
+        quizTermoDynamics3 = (CardView) v.findViewById(R.id.QuizTermoDynamics3);
+
+        quizElectricity1 = (CardView) v.findViewById(R.id.QuizElectricity1);
+        quizElectricity2 = (CardView) v.findViewById(R.id.QuizElectricity2);
+        quizElectricity3 = (CardView) v.findViewById(R.id.QuizElectricity3);
+
+        quizElectricCurrent1 = (CardView) v.findViewById(R.id.QuizElectricCurrent1);
+        quizElectricCurrent2 = (CardView) v.findViewById(R.id.QuizElectricCurrent2);
+        quizElectricCurrent3 = (CardView) v.findViewById(R.id.QuizElectricCurrent3);
+
+        quizMagnetic1 = (CardView) v.findViewById(R.id.QuizMagnetic1);
+        quizMagnetic2 = (CardView) v.findViewById(R.id.QuizMagnetic2);
+        quizMagnetic3 = (CardView) v.findViewById(R.id.QuizMagnetic3);
+
+        quizElectroMagnetic1 = (CardView) v.findViewById(R.id.QuizElectroMagnetic1);
+        quizElectroMagnetic2 = (CardView) v.findViewById(R.id.QuizElectroMagnetic2);
+        quizElectroMagnetic3 = (CardView) v.findViewById(R.id.QuizElectroMagnetic3);
+
 
         //OnclickListener for each card
         quizKinematics1.setOnClickListener(this);
@@ -82,6 +109,29 @@ public class FragmentTask  extends Fragment implements View.OnClickListener {
         quizVolatility2.setOnClickListener(this);
         quizVolatility3.setOnClickListener(this);
 
+        quizMolecularPhysics1.setOnClickListener(this);
+        quizMolecularPhysics2.setOnClickListener(this);
+        quizMolecularPhysics3.setOnClickListener(this);
+
+        quizTermoDynamics1.setOnClickListener(this);
+        quizTermoDynamics2.setOnClickListener(this);
+        quizTermoDynamics3.setOnClickListener(this);
+
+        quizElectricity1.setOnClickListener(this);
+        quizElectricity2.setOnClickListener(this);
+        quizElectricity3.setOnClickListener(this);
+
+        quizElectricCurrent1.setOnClickListener(this);
+        quizElectricCurrent2.setOnClickListener(this);
+        quizElectricCurrent3.setOnClickListener(this);
+
+        quizMagnetic1.setOnClickListener(this);
+        quizMagnetic2.setOnClickListener(this);
+        quizMagnetic3.setOnClickListener(this);
+
+        quizElectroMagnetic1.setOnClickListener(this);
+        quizElectroMagnetic2.setOnClickListener(this);
+        quizElectroMagnetic3.setOnClickListener(this);
 
         return v;
     }
@@ -95,6 +145,7 @@ public class FragmentTask  extends Fragment implements View.OnClickListener {
     public void onClick(View v) {
         Intent i;
         switch(v.getId()){
+
             case R.id.QuizKinematics1:
                 i = new Intent(getActivity(), QuizActivity.class);
                 i.putExtra("THEME_TASK", "1");
@@ -110,6 +161,7 @@ public class FragmentTask  extends Fragment implements View.OnClickListener {
                 i.putExtra("THEME_TASK", "3");
                 startActivity(i);
                 break;
+
             case R.id.QuizDynamics1:
                 i = new Intent(getActivity(), QuizActivity.class);
                 i.putExtra("THEME_TASK", "4");
@@ -120,12 +172,12 @@ public class FragmentTask  extends Fragment implements View.OnClickListener {
                 i.putExtra("THEME_TASK", "5");
                 startActivity(i);
                 break;
-
             case R.id.QuizDynamics3:
                 i = new Intent(getActivity(), QuizActivity.class);
                 i.putExtra("THEME_TASK", "6");
                 startActivity(i);
                 break;
+
             case R.id.QuizLawsOfSaving1:
                 i = new Intent(getActivity(), QuizActivity.class);
                 i.putExtra("THEME_TASK", "7");
@@ -141,6 +193,7 @@ public class FragmentTask  extends Fragment implements View.OnClickListener {
                 i.putExtra("THEME_TASK", "9");
                 startActivity(i);
                 break;
+
             case R.id.QuizStatic1:
                 i = new Intent(getActivity(), QuizActivity.class);
                 i.putExtra("THEME_TASK", "10");
@@ -156,6 +209,7 @@ public class FragmentTask  extends Fragment implements View.OnClickListener {
                 i.putExtra("THEME_TASK", "12");
                 startActivity(i);
                 break;
+
             case R.id.QuizVolatility1:
                 i = new Intent(getActivity(), QuizActivity.class);
                 i.putExtra("THEME_TASK", "13");
@@ -171,6 +225,103 @@ public class FragmentTask  extends Fragment implements View.OnClickListener {
                 i.putExtra("THEME_TASK", "15");
                 startActivity(i);
                 break;
+
+            case R.id.QuizMolecularPhysics1:
+                i = new Intent(getActivity(), QuizActivity.class);
+                i.putExtra("THEME_TASK", "16");
+                startActivity(i);
+                break;
+            case R.id.QuizMolecularPhysics2:
+                i = new Intent(getActivity(), QuizActivity.class);
+                i.putExtra("THEME_TASK", "17");
+                startActivity(i);
+                break;
+            case R.id.QuizMolecularPhysics3:
+                i = new Intent(getActivity(), QuizActivity.class);
+                i.putExtra("THEME_TASK", "18");
+                startActivity(i);
+                break;
+
+            case R.id.QuizTermoDynamics1:
+                i = new Intent(getActivity(), QuizActivity.class);
+                i.putExtra("THEME_TASK", "19");
+                startActivity(i);
+                break;
+            case R.id.QuizTermoDynamics2:
+                i = new Intent(getActivity(), QuizActivity.class);
+                i.putExtra("THEME_TASK", "20");
+                startActivity(i);
+                break;
+            case R.id.QuizTermoDynamics3:
+                i = new Intent(getActivity(), QuizActivity.class);
+                i.putExtra("THEME_TASK", "21");
+                startActivity(i);
+                break;
+
+            case R.id.QuizElectricity1:
+                i = new Intent(getActivity(), QuizActivity.class);
+                i.putExtra("THEME_TASK", "22");
+                startActivity(i);
+                break;
+            case R.id.QuizElectricity2:
+                i = new Intent(getActivity(), QuizActivity.class);
+                i.putExtra("THEME_TASK", "23");
+                startActivity(i);
+                break;
+            case R.id.QuizElectricity3:
+                i = new Intent(getActivity(), QuizActivity.class);
+                i.putExtra("THEME_TASK", "24");
+                startActivity(i);
+                break;
+
+            case R.id.QuizElectricCurrent1:
+                i = new Intent(getActivity(), QuizActivity.class);
+                i.putExtra("THEME_TASK", "25");
+                startActivity(i);
+                break;
+            case R.id.QuizElectricCurrent2:
+                i = new Intent(getActivity(), QuizActivity.class);
+                i.putExtra("THEME_TASK", "26");
+                startActivity(i);
+                break;
+            case R.id.QuizElectricCurrent3:
+                i = new Intent(getActivity(), QuizActivity.class);
+                i.putExtra("THEME_TASK", "27");
+                startActivity(i);
+                break;
+
+            case R.id.QuizMagnetic1:
+                i = new Intent(getActivity(), QuizActivity.class);
+                i.putExtra("THEME_TASK", "28");
+                startActivity(i);
+                break;
+            case R.id.QuizMagnetic2:
+                i = new Intent(getActivity(), QuizActivity.class);
+                i.putExtra("THEME_TASK", "29");
+                startActivity(i);
+                break;
+            case R.id.QuizMagnetic3:
+                i = new Intent(getActivity(), QuizActivity.class);
+                i.putExtra("THEME_TASK", "30");
+                startActivity(i);
+                break;
+
+            case R.id.QuizElectroMagnetic1:
+                i = new Intent(getActivity(), QuizActivity.class);
+                i.putExtra("THEME_TASK", "31");
+                startActivity(i);
+                break;
+            case R.id.QuizElectroMagnetic2:
+                i = new Intent(getActivity(), QuizActivity.class);
+                i.putExtra("THEME_TASK", "32");
+                startActivity(i);
+                break;
+            case R.id.QuizElectroMagnetic3:
+                i = new Intent(getActivity(), QuizActivity.class);
+                i.putExtra("THEME_TASK", "33");
+                startActivity(i);
+                break;
+
                 default:
         }
     }
