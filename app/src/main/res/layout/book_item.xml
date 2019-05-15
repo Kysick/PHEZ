@@ -2,21 +2,22 @@
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="60dp"
+    android:layout_height="50dp"
     android:orientation="horizontal"
-    android:layout_marginTop="10dp"
     android:id="@+id/item_book"
-    android:background="?attr/backgroundcolor">
+    android:background="?attr/backgroundcolor"
+>
 
 
 
 
     <TextView
+        android:gravity="center"
         android:textColor="?attr/textcolor"
         android:id="@+id/txt_theme"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:textSize="25sp" />
+        android:textSize="20sp" />
 
 
 
