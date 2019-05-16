@@ -8,6 +8,7 @@
     tools:context=".ListActivity"
     android:background="?attr/backgroundcolor">
     <ListView
+
         android:id="@+id/lvThemeList"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">

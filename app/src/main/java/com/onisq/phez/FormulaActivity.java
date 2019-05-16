@@ -147,7 +147,7 @@ public class FormulaActivity extends AppCompatActivity {
         cursor = mDb.rawQuery(command, null);
         cursor.moveToFirst();
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
-        builder.setTitle("Знаки");
+        builder.setTitle("Обозначения");
         String desc = cursor.getString(0);
         builder.setMessage(desc);
         builder.setCancelable(true);
