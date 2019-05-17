@@ -18,7 +18,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:padding="10dp"
-            android:text="Привет!"
+            android:text="Твой прогресс"
             android:textSize="30sp" />
 
         <ProgressBar
@@ -26,11 +26,23 @@
             style="?android:progressBarStyleHorizontal"
             android:layout_width="300dp"
             android:layout_height="300dp"
+            android:background="@drawable/circle_shape"
+            android:indeterminate="false"
             android:layout_gravity="center_horizontal"
-            android:max="50"
+            android:max="60"
             android:progress="40"
             android:progressDrawable="@drawable/circle"
             android:rotation="90" />
+        <TextView
+            android:id="@+id/tvPB"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/progressBar"
+            android:background="@android:color/transparent"
+            android:text="100"
+            android:textSize="20sp"
+            android:gravity="center"
+            android:padding="5dp"/>
 
         <LinearLayout
             android:layout_width="match_parent"

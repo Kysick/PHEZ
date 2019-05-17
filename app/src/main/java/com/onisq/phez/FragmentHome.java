@@ -1,5 +1,6 @@
 package com.onisq.phez;
 
+import android.animation.ObjectAnimator;
 import android.app.Application;
 import android.content.Intent;
 import android.database.Cursor;
@@ -12,9 +13,11 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.animation.DecelerateInterpolator;
 import android.widget.Button;
 import android.widget.ListView;
 import android.widget.ProgressBar;
+import android.widget.TextView;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -22,6 +25,7 @@ import java.util.ArrayList;
 public class FragmentHome   extends Fragment {
 
     View v;
+    TextView tvPB;
     Button formula;
     Button settings;
     private DatabaseHelper mDBHelper;
@@ -81,6 +85,14 @@ public class FragmentHome   extends Fragment {
                 startActivity(ii);
             }
         });
+
+        ObjectAnimator animation = ObjectAnimator.ofInt(progressBar, "progress", 0, Score);
+        animation.setDuration(1);
+        animation.setInterpolator(new DecelerateInterpolator());
+        animation.start();
+
+        tvPB = (TextView) v.findViewById(R.id.tvPB);
+        tvPB.setText(Score + " exp");
 
         return v;
     }
