@@ -116,7 +116,7 @@ public class FragmentBook extends Fragment implements View.OnClickListener {
             case R.id.molecularPhysicsId:
 
                 i = new Intent(getActivity(), ListActivity.class);
-                i.putExtra("THEME_STRING", "themeMolecularPhysics");
+                i.putExtra("THEME_STRING", "themesMolecularPhysics");
                 startActivity(i);
                 break;
             case R.id.termoDynamicsId:

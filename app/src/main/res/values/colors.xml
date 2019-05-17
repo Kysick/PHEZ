@@ -8,7 +8,7 @@
     <color name="colorPrimary">#008577</color>
     <color name="colorPrimaryDark">#00574B</color>
     <color name="colorAccent">#D81B60</color>
-    <color name="backgroundcolorLight">#ffffff</color>
+    <color name="backgroundcolorLight">#FFFAFA</color>
     <color name="cardbackgroundcolorLight">#ffffff</color>
     <color name="textcolorLight">#000000</color>
     <color name="tintcolorLight">#000000</color>

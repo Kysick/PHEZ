@@ -28,6 +28,7 @@
         android:layout_below="@+id/numQ"/>
 
     <EditText
+        android:textColorHint="?attr/textcolor"
         android:textColor="?attr/textcolor"
         android:id="@+id/answer"
         android:layout_width="250dp"

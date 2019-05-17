@@ -8,7 +8,7 @@
     tools:context=".ListActivity"
     android:background="?attr/backgroundcolor">
     <ListView
-        android:background="?attr/backgroundcolor"
+
         android:id="@+id/lvThemeList"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
@@ -17,11 +17,14 @@
     <Button
         android:id="@+id/formulaThemeBTN"
         android:layout_alignParentBottom="true"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
         android:padding="10dp"
         android:text="Формулы"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="?attr/buttoncolor"
+        android:background="@drawable/buttonround"
         android:textColor="?attr/textcolor"/>
     </RelativeLayout>
 
