@@ -29,11 +29,12 @@
             android:background="@drawable/circle_shape"
             android:indeterminate="false"
             android:layout_gravity="center_horizontal"
-            android:max="60"
+            android:max="200"
             android:progress="40"
             android:progressDrawable="@drawable/circle"
             android:rotation="90" />
         <TextView
+            android:textColor="?attr/textcolor"
             android:id="@+id/tvPB"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
