@@ -55,7 +55,8 @@ public class ResultActivity extends AppCompatActivity {
         cursor.moveToFirst();
         int oldScore = cursor.getInt(cursor.getColumnIndex("Points"));
         int score = getIntent().getIntExtra("RIGHT_ANSWER", 0 );
-        int finalScore = score + oldScore;
+        int mod = getIntent().getIntExtra("MOD", 0 );
+        int finalScore = (score * mod) + oldScore;
 
         ContentValues cv = new ContentValues();
         cv.put("Points",finalScore);

@@ -81,7 +81,7 @@
         android:layout_centerHorizontal="true"/>
     <Button
         android:textColor="?attr/textcolor"
-        android:background="?attr/buttoncolor"
+        android:background="@drawable/buttonround"
         android:id="@+id/submitBtn"
         android:layout_width="350dp"
         android:layout_height="50dp"

@@ -28,7 +28,7 @@
         android:layout_below="@+id/numQ"/>
 
     <Button
-        android:background="?attr/buttoncolor"
+        android:background="@drawable/buttonround"
         android:textColor="?attr/textcolor"
         android:id="@+id/ansbtn1"
         android:layout_width="match_parent"
@@ -40,7 +40,7 @@
         android:layout_above="@+id/ansbtn2"/>
 
     <Button
-        android:background="?attr/buttoncolor"
+        android:background="@drawable/buttonround"
         android:textColor="?attr/textcolor"
         android:id="@+id/ansbtn2"
         android:layout_width="match_parent"
@@ -52,7 +52,7 @@
         android:layout_above="@+id/ansbtn3"/>
 
     <Button
-        android:background="?attr/buttoncolor"
+        android:background="@drawable/buttonround"
         android:textColor="?attr/textcolor"
         android:id="@+id/ansbtn3"
         android:layout_width="match_parent"
@@ -64,7 +64,7 @@
         android:layout_above="@+id/ansbtn4"/>
 
     <Button
-        android:background="?attr/buttoncolor"
+        android:background="@drawable/buttonround"
         android:textColor="?attr/textcolor"
         android:id="@+id/ansbtn4"
         android:layout_gravity="bottom"

@@ -269,6 +269,7 @@ public class QuizActivity extends AppCompatActivity {
                 if(quizCount == QUIZ_COUNT){
                     Intent i = new Intent(getApplicationContext(), ResultActivity.class);
                     i.putExtra("RIGHT_ANSWER", rightAnswerCount);
+                    i.putExtra("MOD", 2);
                     startActivity(i);
                 }else{
                     quizCount++;
@@ -312,6 +313,7 @@ public class QuizActivity extends AppCompatActivity {
                 if(quizCount == QUIZ_COUNT){
                     Intent i = new Intent(getApplicationContext(), ResultActivity.class);
                     i.putExtra("RIGHT_ANSWER", rightAnswerCount);
+                    i.putExtra("MOD", 2);
                     startActivity(i);
                 }else{
                     quizCount++;
@@ -394,6 +396,7 @@ public class QuizActivity extends AppCompatActivity {
                 if(quizCount == QUIZ_COUNT){
                     Intent i = new Intent(getApplicationContext(), ResultActivity.class);
                     i.putExtra("RIGHT_ANSWER", rightAnswerCount);
+                    i.putExtra("MOD", 3);
                     startActivity(i);
                 }else{
                     quizCount++;

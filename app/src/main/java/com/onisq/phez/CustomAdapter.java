@@ -66,16 +66,9 @@ public class CustomAdapter extends ArrayAdapter<FormulaItem> {
         }
 
 
-
         viewHolder.theme.setText(formulaItem.getTheme());
         viewHolder.definition.setText(formulaItem.getDefinition());
         int resID = mContext.getResources().getIdentifier(formulaItem.getFormula(), "drawable", mContext.getPackageName());
-
-
-
-
-
-
 
         final float[] NEGATIVE = {
                 -1.0f,     0,     0,    0, 255, // red
@@ -84,21 +77,15 @@ public class CustomAdapter extends ArrayAdapter<FormulaItem> {
                 0,     0,     0, 1.0f,   0  // alpha
         };
 
-
-
         if (resID != 0) {//The associated resource identifier. Returns 0 if no such resource was found. (0 is not a valid resource ID.)
             SharedPref sharedPref = new SharedPref(mContext);
             if(sharedPref.loadNightModeState()){
                 viewHolder.formula.setColorFilter(new ColorMatrixColorFilter(NEGATIVE));
             }
                 viewHolder.formula.setImageResource(resID);
-
         }
         return convertView;
     }
-
-
-
 }
 
 

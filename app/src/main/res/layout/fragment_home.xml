@@ -29,7 +29,7 @@
             android:background="@drawable/circle_shape"
             android:indeterminate="false"
             android:layout_gravity="center_horizontal"
-            android:max="200"
+            android:max="1000"
             android:progress="40"
             android:progressDrawable="@drawable/circle"
             android:rotation="90" />
