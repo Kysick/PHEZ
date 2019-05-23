@@ -11,8 +11,11 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.io.IOException;
+
+import javax.xml.transform.Result;
 
 public class ResultActivity extends AppCompatActivity {
 
@@ -56,7 +59,8 @@ public class ResultActivity extends AppCompatActivity {
         int oldScore = cursor.getInt(cursor.getColumnIndex("Points"));
         int score = getIntent().getIntExtra("RIGHT_ANSWER", 0 );
         int mod = getIntent().getIntExtra("MOD", 0 );
-        int finalScore = (score * mod) + oldScore;
+        int newScore = mod * score;
+        int finalScore = newScore + oldScore;
 
         ContentValues cv = new ContentValues();
         cv.put("Points",finalScore);
@@ -67,6 +71,7 @@ public class ResultActivity extends AppCompatActivity {
 
         resultTv.setText(score + " / 5");
         totalScoreTv.setText("Total Score : " + fscore);
+        Toast.makeText(ResultActivity.this, "Вы получили " + newScore + " exp", Toast.LENGTH_SHORT).show();
     }
 
     public void returnTop(View view){

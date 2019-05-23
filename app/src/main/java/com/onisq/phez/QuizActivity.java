@@ -15,6 +15,8 @@ import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.Switch;
 import android.widget.TextView;
+import android.widget.Toast;
+
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Collections;
@@ -254,22 +256,22 @@ public class QuizActivity extends AppCompatActivity {
 
         String alert;
         if(btnTx.equals(rightAnswer)){
-            alert = "You right";
+            alert = "Верно";
             rightAnswerCount++;
         }else{
-            alert = "You wrong";
+            alert = "Неверно";
         }
 
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         builder.setTitle(alert);
-        builder.setMessage("Answer : " + rightAnswer);
+        builder.setMessage("Правельный ответ: " + rightAnswer);
         builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
                 if(quizCount == QUIZ_COUNT){
                     Intent i = new Intent(getApplicationContext(), ResultActivity.class);
                     i.putExtra("RIGHT_ANSWER", rightAnswerCount);
-                    i.putExtra("MOD", 2);
+                    i.putExtra("MOD", 1);
                     startActivity(i);
                 }else{
                     quizCount++;
@@ -288,10 +290,10 @@ public class QuizActivity extends AppCompatActivity {
 
         String alert;
         if(selection.equals(rightAns)){
-            alert = "Your right";
+            alert = "Верно";
             rightAnswerCount++;
         }else{
-            alert = "Your wrong";
+            alert = "Неверно";
         }
 
         Quiz.clear();
@@ -299,7 +301,7 @@ public class QuizActivity extends AppCompatActivity {
 
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         builder.setTitle(alert);
-        builder.setMessage("Answer : " + rightAns);
+        builder.setMessage("Правельный ответ: " + rightAns);
         rightAns.clear();
         builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
             @Override
@@ -380,15 +382,15 @@ public class QuizActivity extends AppCompatActivity {
 
         String alert;
         if(answer.equals(rightAnswer)){
-            alert = "Your right";
+            alert = "Верно";
             rightAnswerCount++;
         }else{
-            alert = "Your wrong";
+            alert = "Неверно";
         }
 
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         builder.setTitle(alert);
-        builder.setMessage("Answer : " + rightAnswer);
+        builder.setMessage("Правельный ответ: " + rightAnswer);
         builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {

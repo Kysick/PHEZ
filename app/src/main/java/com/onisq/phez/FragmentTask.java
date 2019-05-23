@@ -10,6 +10,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.Toast;
 
 public class FragmentTask  extends Fragment implements View.OnClickListener {
 
@@ -178,7 +179,7 @@ public class FragmentTask  extends Fragment implements View.OnClickListener {
                 startActivity(i);
                 break;
 
-            case R.id.QuizLawsOfSaving1:
+            /*case R.id.QuizLawsOfSaving1:
                 i = new Intent(getActivity(), QuizActivity.class);
                 i.putExtra("THEME_TASK", "7");
                 startActivity(i);
@@ -320,9 +321,9 @@ public class FragmentTask  extends Fragment implements View.OnClickListener {
                 i = new Intent(getActivity(), QuizActivity.class);
                 i.putExtra("THEME_TASK", "33");
                 startActivity(i);
-                break;
-
+                break;*/
                 default:
+                    Toast.makeText(getContext(), "Work in progress", Toast.LENGTH_SHORT).show();
         }
     }
 }

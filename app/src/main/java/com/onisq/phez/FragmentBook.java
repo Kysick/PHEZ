@@ -14,6 +14,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -95,7 +96,7 @@ public class FragmentBook extends Fragment implements View.OnClickListener {
                 i.putExtra("THEME_STRING", "themesDynamics");
                 startActivity(i);
                 break;
-            case R.id.lawOfSavingId:
+            /*case R.id.lawOfSavingId:
 
                 i = new Intent(getActivity(), ListActivity.class);
                 i.putExtra("THEME_STRING", "themesLawOfSaving");
@@ -148,11 +149,9 @@ public class FragmentBook extends Fragment implements View.OnClickListener {
                 i = new Intent(getActivity(), ListActivity.class);
                 i.putExtra("THEME_STRING", "themesElectroMagnetic");
                 startActivity(i);
-                break;
+                break;*/
+         default:
+             Toast.makeText(getContext(), "Work in progress", Toast.LENGTH_SHORT).show();
         }
-
-
     }
-
-
 }
